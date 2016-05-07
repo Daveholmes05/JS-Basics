@@ -4,7 +4,15 @@ var name = 'Tyler';
 //Create a function called isTyler that accepts name as it's only parameter.
 //If the argument you passed in is equal to 'Tyler', return true. If it's not, return false.
 
-  //Code Here
+  function isTyler(name) {
+  	if (name === "Tyler") {
+  		return true;
+  	}
+  	else {
+  		return false;
+  	}
+  }
+
 
 //////////////////PROBLEM 2////////////////////
 
@@ -12,8 +20,10 @@ var name = 'Tyler';
 //Create a function called getName that uses prompt() to prompt the user for their name, then returns the name.
 
 
-  //Code Here
-
+function getName() {
+	name = prompt("What is your name?");
+	return name;
+}
 
 //////////////////PROBLEM 3////////////////////
 
@@ -22,8 +32,9 @@ var name = 'Tyler';
 //Create a function called welcome that uses your getName function you created in the previous problem to get the users name,
 //then alerts "Welcome, " plus whatever the users name is.
 
-  //Code Here
-
+function welcome(getName) {
+	alert("Welcome" + " " + name);
+}
 
 //////////////////PROBLEM 4////////////////////
 
@@ -32,7 +43,7 @@ var name = 'Tyler';
 
 //What is the difference between arguments and parameters?
 
-  //Answer Here
+//parameters are entered in the parentheses of a function. Argument is what's passed when calling the function. An argument is placed in the calling parentheses.
 
 
 //////////////////PROBLEM 5////////////////////
@@ -42,7 +53,7 @@ var name = 'Tyler';
 //What are all the falsy values in JavaScript and how do you check if something is falsy?
 
 
-  //Answer Here
+  //NaN, none, 0, false, null, space, empty string, undefined. if (!string)
 
 
 
@@ -52,16 +63,18 @@ var name = 'Tyler';
 
 //Create a function called myName that returns your name
 
-  //Code Here
+  function myName(name) {
+  	return name;
+  }
   
 
 
 //Now save the function definition of myName into a new variable called newMyName
 
-  //Code Here
+  var newMyName = myName;
 
 //Now alert the result of invoking newMyName
-
+alert(newMyName("Dave"));
 
 
 //////////////////PROBLEM 7////////////////////
