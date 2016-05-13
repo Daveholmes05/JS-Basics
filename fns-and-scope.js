@@ -74,7 +74,7 @@ function welcome(getName) {
   var newMyName = myName;
 
 //Now alert the result of invoking newMyName
-alert(newMyName("Dave"));
+// alert(newMyName("Dave"));
 
 
 //////////////////PROBLEM 7////////////////////
@@ -97,3 +97,18 @@ alert(newMyName("Dave"));
 
 //Now invoke innerFn.
 innerFn();
+
+/////////////// After lecture problems by Blake ///////////////////////
+
+//create a function that takes in a number and returns that number//
+
+function a(num) {
+	return num;
+}
+
+
+//create function that takes 2 numbers as params an returns the sum of the 2 numbers//
+
+function b(one, two) {
+	return one + two;
+}
