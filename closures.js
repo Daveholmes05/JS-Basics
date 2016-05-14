@@ -10,11 +10,11 @@ var outer = function(){
 // // Invoke outer saving the return value into another variable called 'inner'.
 
 //   //Code Here
-var inner = outer();
-// //Once you do that, invoke inner.
+// var inner = outer();
+// // //Once you do that, invoke inner.
 
-//   //Code Here
-inner();
+// //   //Code Here
+// inner();
 
 
 // //////////////////PROBLEM 2////////////////////
@@ -22,7 +22,7 @@ inner();
 
 var callFriend = function(){
   var friend = 'Jake';
-  function callF(number){
+  function callF(friend,number){
     return 'Calling ' + friend + ' at ' + number;
   }
   return callF;
@@ -32,10 +32,10 @@ var callFriend = function(){
 // //Above you're given a callFriend function that returns another function.
 // //Do what you need to do in order to call your function and get 'Calling Jake at 435-215-9248' in your console.
 
-//   //Code Here
+// //   //Code Here
 var inner = callFriend();
 
-inner('435-215-9248');
+inner('jake','435-215-9248');
 
 
 // //////////////////PROBLEM 3////////////////////
@@ -54,7 +54,7 @@ inner('435-215-9248');
   
 // //Uncomment this once you make your function
   var count = makeCounter();
-  console.log(count(),
+  console.log(count()),
   count(); // 1
   count(); // 2
   count(); // 3
@@ -90,16 +90,17 @@ inner('435-215-9248');
 
 // // Inside the motivation function create another function called message that will return welcomeText + firstname + lastname
 
-//   function motivation(firstname, lastname){
+  function motivation(firstname, lastname){
+  	function message(){
+    var welcomeText = 'Your doing awesome keep it up ';
 
-//     var welcomeText = 'Your doing awesome keep it up    ';
-
+    return welcomeText + firstname + " " + lastname;
 //     // code message function here
 
-
+	}
 //     //Uncommment this to return the value of your invoked message function
-//     // return message()
-//   }
+    return message()
+  }
 
 //   motivation('Billy', 'Bob'); // 'Your doing awesome keep it up Billy Bob
 
@@ -109,27 +110,29 @@ inner('435-215-9248');
 // // Inside the return create a publicMethod property that is a function that invokes privateMethod. After you create the privateMethod
 // // Invoke it by calling module.publicMethod(); outside the module scope
 
-//   var module = (function() {
-//     var person = {
-//       name: "phillip",
-//       age: 29,
-//       location: 'Utah'
-//     };
+  var module = (function() {
+    var person = {
+      name: "phillip",
+      age: 29,
+      location: 'Utah'
+    };
 
-//     var privateMethod = function(){
-//       return welcomeText + firstname + '  ' + lastname;
-//     };
+    var privateMethod = function(){
+
+      return welcomeText + firstname + '  ' + lastname;
+    };
 
 //     // Anything that is being returned is made public and can be invoked from outside our lexical scope
 
-//     return {
-//       // Code here
-//     };
+	var publicMethod = function() {
 
-//   })();
+		return 
+    };
+
+  })();
 
 // //Uncomment this after you create your public method
-// //   module.publicMethod();
+  module.publicMethod();
 
 
 
@@ -138,11 +141,11 @@ inner('435-215-9248');
 // // So that it logs ( 1 then 2 then 3, etc). Run this code in your console to see what the output is.
 
 
-//   for (var i = 0; i <= 5; i++) {
-//     setTimeout(function() {
-//       console.log(i)
-//     }, i * 1000)
-//   }
+  for (var i = 0; i <= 5; i++) {
+    setTimeout(function() {
+      console.log(i)
+    }, i * 1000)
+  }
 
 
 //   // To make this code work you will need to create a new scope for every iteration.
